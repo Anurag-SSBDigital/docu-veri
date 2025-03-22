@@ -23,25 +23,26 @@ const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({
 
 function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <div className="min-h-screen bg-gray-50">
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route
-              path="/"
-              element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
-              }
-            />
-          </Routes>
-          <Toaster position="top-right" />
-        </div>
-      </BrowserRouter>
-    </AuthProvider>
+    <Dashboard />
+    // <AuthProvider>
+    //   <BrowserRouter>
+    //     <div className="min-h-screen bg-gray-50">
+    //       <Routes>
+    //         <Route path="/login" element={<Login />} />
+    //         <Route path="/register" element={<Register />} />
+    //         <Route
+    //           path="/"
+    //           element={
+    //             <PrivateRoute>
+
+    //             </PrivateRoute>
+    //           }
+    //         />
+    //       </Routes>
+    //       <Toaster position="top-right" />
+    //     </div>
+    //   </BrowserRouter>
+    // </AuthProvider>
   );
 }
 
